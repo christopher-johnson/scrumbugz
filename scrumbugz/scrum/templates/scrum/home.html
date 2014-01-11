@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="hero-unit">
+    <h1>Scrumify your Bugzilla</h1>
+    <p>This site allows you to see all the scrummy details of the projects
+    you're managing in Bugzilla. Just enter the Product and optionally Component
+    into the "New Project" form. Any open bugs with scrum data (u, c, or p tag
+    in the whiteboard field) will then appear in your backlog. Move them into
+    a sprint and reap the glory as your burndown chart slopes to victory.</p>
+
+    <p>
+      <a class="btn btn-primary btn-large"
+         href="{{ url('scrum_teams_list') }}">Go To Teams &raquo;</a>
+    </p>
+  </div>
+{% endblock %}
