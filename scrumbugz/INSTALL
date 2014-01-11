@@ -1,0 +1,141 @@
+Deploy Scrumbugz in Django on Apache with Virtualenv and mod_wsgi
+ 
+ Install Pip
+ sudo apt-get install python-pip python-dev build-essential
+ 
+ Upgrade Pip
+ sudo pip install --upgrade pip
+ 
+ Install Setuptools
+ sudo wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | sudo python
+
+ Install VirtualenvWrapper
+ sudo pip install virtualenvwrapper
+ 
+ cd /usr/local/
+ sudo git clone https://github.com/ChristopherHJohnson/scrumbugz.git
+ sudo chown -R chjohnson scrumbugz
+ mv scrumbugz django
+ 
+ cd django/scrumbugz
+ virtualenv venv
+ pip install -r requirements-dev.txt
+ 
+ cd ..
+django-admin.py startproject scrumbugz .
+
+EDIT settings.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'scrumbugs',                      # Or path to database file if using sqlite3.
+        'USER': 'root',                      # Not used with sqlite3.
+        'PASSWORD': '*****',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
+Install Mysql
+sudo apt-get install mysql-server
+sudo apt-get install python-mysqldb
+sudo apt-get install libmysqlclient-dev
+pip install mysql-python
+pip install python-memcached
+
+mysql -u root -p
+CREATE DATABASE scrumbugs;
+GRANT ALL ON scrumbugs.* TO 'root'@'localhost' IDENTIFIED BY '*****';
+
+Populate Database and Initiate settings.py
+./manage.py syncdb
+./manage.py migrate
+
+ Install Apache
+ sudo apt-get install apache2 apache2.2-common apache2-mpm-prefork apache2-utils libexpat1
+ 
+ Install WSGI
+ sudo apt-get install libapache2-mod-wsgi
+ 
+ Setup Apache
+ cd /var/www
+ mkdir scripts media static
+ cd /etc/apache2/sites-available
+ cp -R /usr/local/django/scrumbugz/static /var/www/static
+ cp -R /usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/admin/static/admin /var/www/static
+ 
+ cd /etc/apache2/sites-available
+ sudo mv default sb
+ sudo nano sb
+ 
+Apache conf file (/etc/apache2/sites-available/sb)
+ 
+ <VirtualHost *:80>
+        Alias /robots.txt /var/www/static/robots.txt
+        Alias /favicon.ico /var/www/static/favicon.ico
+
+        AliasMatch ^/([^/]*\.css) /var/www/static/styles/$1
+
+        Alias /media/ /var/www/media/
+        Alias /static/ /var/www/static/
+
+
+        ServerName wmflabs.org
+        ServerAlias wmde.wmflabs.org
+        WSGIScriptAlias / /var/www/scripts/wsgi.py
+
+DocumentRoot /var/www
+        <Directory "/var/www">
+                Options +Indexes +FollowSymLinks
+                AllowOverride All
+                Order deny,allow
+                Allow from all
+        </Directory>
+
+        <Directory "/var/www/static">
+                Order deny,allow
+                Allow from all
+        </Directory>
+
+         <Directory "/var/www/media">
+                Order deny,allow
+                Allow from all
+        </Directory>
+</VirtualHost>
+
+WSGI.PY (put in /var/www/scripts)
+
+import os
+import sys
+import site
+
+# Add the site-packages of the chosen virtualenv to work with
+site.addsitedir('/usr/local/django/scrumbugz/venv/local/lib/python2.7/site-packages')
+
+# Add the app's directory to the PYTHONPATH
+sys.path.append('/usr/local/django')
+sys.path.append('/usr/local/django/scrumbugz')
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+
+# Activate your virtual env
+activate_env=os.path.expanduser("/usr/local/django/scrumbugz/venv/bin/activate_this.py")
+execfile('/usr/local/django/scrumbugz/venv/bin/activate_this.py', dict(__file__='/usr/local/django/scrumbugz/venv/bin/activate_this.py'))
+
+import django.core.handlers.wsgi
+application = django.core.handlers.wsgi.WSGIHandler()
+
+
+# This application object is used by any WSGI server configured to use this
+# file. This includes Django's development server, if the WSGI_APPLICATION
+# setting points here.
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+
+# Apply WSGI middleware here.
+# from helloworld.wsgi import HelloWorldApplication
+# application = HelloWorldApplication(application)
+
+sudo a2dissite default
+sudo a2ensite sb
+ 
