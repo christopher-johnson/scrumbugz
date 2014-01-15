@@ -1,4 +1,4 @@
-Deploy Scrumbugz in Django on Apache with Virtualenv and mod_wsgi
+ Deploy Scrumbugz in Django on Apache with Virtualenv and mod_wsgi
  
  Install Pip
  sudo apt-get install python-pip python-dev build-essential
@@ -17,14 +17,21 @@ Deploy Scrumbugz in Django on Apache with Virtualenv and mod_wsgi
  sudo chown -R chjohnson scrumbugz
  mv scrumbugz django
  
+ Setup Python Virtual Environment
  cd django/scrumbugz
  virtualenv venv
+ source venv/bin/activate
+ 
+ Install Python Dependencies
  pip install -r requirements-dev.txt
  
- cd ..
+Initialize Django Project (appends [PROJECT_DIR] to $sys.path 
+cd ..
 django-admin.py startproject scrumbugz .
 
+sudo mv settings-dist.py settings.py
 EDIT settings.py
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -52,24 +59,31 @@ Populate Database and Initiate settings.py
 ./manage.py migrate
 
  Install Apache
- sudo apt-get install apache2 apache2.2-common apache2-mpm-prefork apache2-utils libexpat1
+ sudo apt-get install apache2 apache2.2-common apache2-mpm-prefork apache2-utils libexpat1 
  
  Install WSGI
  sudo apt-get install libapache2-mod-wsgi
  
+ Install Rabbit MQ
+ sudo apt-get install rabbitmq-server
+
  Setup Apache
  cd /var/www
  mkdir scripts media static
  cd /etc/apache2/sites-available
+ 
+ Copy Static Files
  cp -R /usr/local/django/scrumbugz/static /var/www/static
  cp -R /usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/admin/static/admin /var/www/static
- 
+ cp -R /usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/static/browserid/static/browserid /var/www/static
+
+ Setup Virtual Host
  cd /etc/apache2/sites-available
  sudo mv default sb
  sudo nano sb
  
 Apache conf file (/etc/apache2/sites-available/sb)
- 
+ --------------begin sb.conf
  <VirtualHost *:80>
         Alias /robots.txt /var/www/static/robots.txt
         Alias /favicon.ico /var/www/static/favicon.ico
@@ -102,9 +116,10 @@ DocumentRoot /var/www
                 Allow from all
         </Directory>
 </VirtualHost>
+ --------------end sb.conf
 
 WSGI.PY (put in /var/www/scripts)
-
+--------------start WSGI.py
 import os
 import sys
 import site
@@ -124,18 +139,10 @@ execfile('/usr/local/django/scrumbugz/venv/bin/activate_this.py', dict(__file__=
 
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
-
-
-# This application object is used by any WSGI server configured to use this
-# file. This includes Django's development server, if the WSGI_APPLICATION
-# setting points here.
-from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
-
-# Apply WSGI middleware here.
-# from helloworld.wsgi import HelloWorldApplication
-# application = HelloWorldApplication(application)
+--------------end WSGI.py
 
 sudo a2dissite default
 sudo a2ensite sb
- 
+
+Start Bugzilla Sync
+./manage.py celeryd -E -B --loglevel=info
