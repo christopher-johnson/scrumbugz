@@ -16,8 +16,8 @@ ADMINS = (
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-BUGMAIL_HOST= 'scrumbugz.pmtpa.wmflabs'
-BUGMAIL_USER= 'chjohnson'
+BUGMAIL_HOST= '*****'
+BUGMAIL_USER= '*****'
 BUGMAIL_PASS= '*****'
 BUGZILLA_SHOW_URL= 'http://wmde-bugs.wmflabs.org/show_bug.cgi?'
 BUGZILLA_API_URL= 'http://scrumbugz.pmtpa.wmflabs/xmlrpc.cgi'
@@ -36,8 +36,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'scrumbugs',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '*****',                  # Not used with sqlite3.
+        'USER': '****',                      # Not used with sqlite3.
+        'PASSWORD': '****',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -206,6 +206,18 @@ CELERYD_CONCURRENCY = 4
 CELERYBEAT_SCHEDULE = {
     'get-bugmails': {
         'task': 'get_bugmails',
+        'schedule': timedelta(minutes=1),
+    },
+    'update_product': {
+        'task': 'update_product',
+        'schedule': timedelta(minutes=1),
+    },
+    'update_bugs': {
+        'task': 'update_bugs',
+        'schedule': timedelta(minutes=1),
+    },
+    'update_sprint_data': {
+        'task': 'update_sprint_data',
         'schedule': timedelta(minutes=1),
     },
     'clean-bugmails': {
