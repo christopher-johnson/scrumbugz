@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/django/scrumbugz/venv/bin/python
 import os
 import sys
 

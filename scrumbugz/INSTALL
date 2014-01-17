@@ -1,4 +1,5 @@
  Deploy Scrumbugz in Django on Apache with Virtualenv and mod_wsgi
+and Setup Celery Task Queue for Bug Sync
  
  Install Pip
  sudo apt-get install python-pip python-dev build-essential
@@ -47,7 +48,9 @@ Install Mysql
 sudo apt-get install mysql-server
 sudo apt-get install python-mysqldb
 sudo apt-get install libmysqlclient-dev
+
 pip install mysql-python
+
 pip install python-memcached
 
 mysql -u root -p
@@ -144,5 +147,45 @@ application = django.core.handlers.wsgi.WSGIHandler()
 sudo a2dissite default
 sudo a2ensite sb
 
-Start Bugzilla Sync
-./manage.py celeryd -E -B --loglevel=info
+CELERY CONF
+Install Supervisor
+sudo easy_install supervisor
+sudo mkdir /etc/supervisord
+---------------start supervisord.conf
+
+[unix_http_server]
+file=/tmp/supervisor.sock   ; (the path to the socket file)
+
+[supervisord]
+logfile=/var/log/supervisord/main.log ; (main log file;default $CWD/supervisord.log)
+logfile_maxbytes=50MB        ; (max main logfile bytes b4 rotation;default 50MB)
+logfile_backups=10           ; (num of main logfile rotation backups;default 10)
+loglevel=info                ; (log level;default info; others: debug,warn,trace)
+pidfile=/tmp/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
+nodaemon=false               ; (start in foreground if true;default false)
+minfds=1024                  ; (min. avail startup file descriptors;default 1024)
+minprocs=200                 ; (min. avail process descriptors;default 200)
+childlogdir=/var/log/supervisord            ; ('AUTO' child log dir, default $TEMP)
+
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
+
+[supervisorctl]
+serverurl=unix:///tmp/supervisor.sock ; use a unix:// URL  for a unix socket
+
+[include]
+files = /etc/supervisord/conf.d/*.conf
+------------------end supervisord.conf
+
+sudo mkdir /etc/supervisord
+cp supervisord.conf /etc/supervisord
+sudo mkdir /etc/supervisord/conf.d
+sudo cp scrumbugz-celery.conf /etc/supervisord/conf.d
+create  /var/log/supervisord and /var/log/celery
+sudo chown chjohnson supervisord
+
+#start supervisord
+supervisord -c /etc/supervisord/supervisord.conf
+#stop supervisord
+sudo supervisorctl -c /etc/supervisord/supervisord.conf shutdown
+

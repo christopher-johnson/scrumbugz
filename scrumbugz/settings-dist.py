@@ -1,5 +1,4 @@
 from datetime import timedelta
-
 import os
 import djcelery
 from unipath import Path
@@ -9,7 +8,7 @@ djcelery.setup_loader()
 PROJECT_DIR = os.path.dirname(__file__)
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+     ('Christopher Johnson', 'christopher.johnson@wikimedia.de'),
 )
 
 # Django settings for scrumbugz project.
@@ -31,10 +30,6 @@ SITE_URL = 'http://scrum.pmtpa.wmflabs'
 SECRET_KEY = "shhhhhh"
 INTERNAL_IPS = (
     '127.0.0.1',
-)
-
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
 )
 
 DATABASES = {
@@ -166,7 +161,7 @@ INSTALLED_APPS = (
     'cronjobs',
     'bootstrap',
     'floppyforms',
-    'djcelery',
+   'djcelery',
     'scrum',
     'bugmail',
     'bugzilla',
@@ -201,6 +196,7 @@ NOSE_ARGS = [
 ]
 
 # Celery
+CELERY_IMPORTS = ('bugmail')
 BROKER_URL = "amqp://guest:guest@localhost:5672//"
 CELERY_DISABLE_RATE_LIMITS = True
 CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
@@ -210,7 +206,7 @@ CELERYD_CONCURRENCY = 4
 CELERYBEAT_SCHEDULE = {
     'get-bugmails': {
         'task': 'get_bugmails',
-        'schedule': timedelta(minutes=5),
+        'schedule': timedelta(minutes=1),
     },
     'clean-bugmails': {
         'task': 'clean_bugmail_log',
@@ -244,7 +240,7 @@ LOGGING = {
         'default': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': '/usr/local/django/logs/mylog.log',
+            'filename': '/usr/local/django/logs/django.log',
             'maxBytes': 1024*1024*5, # 5 MB
             'backupCount': 5,
             'formatter':'standard',
