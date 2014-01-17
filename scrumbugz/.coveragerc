@@ -1,6 +1,0 @@
-[report]
-include:
-    scrum/*
-
-[html]
-directory = _coverage
