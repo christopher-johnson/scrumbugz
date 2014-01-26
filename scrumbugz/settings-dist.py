@@ -13,7 +13,7 @@ ADMINS = (
 
 # Django settings for scrumbugz project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 BUGMAIL_HOST= 'scrumbugz.pmtpa.wmflabs'
@@ -36,7 +36,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'scrumbugs',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
+        'USER': '*****',                      # Not used with sqlite3.
         'PASSWORD': '*****',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
@@ -103,15 +103,17 @@ STATICFILES_DIRS = (
 
 JINGO_EXCLUDE_APPS = (
     'admin',
-    'auth',
-    'context_processors',  # needed for django tests
-    'debug_toolbar',
-    'floppyforms',
-    'registration',  # needed for django tests
+#    'auth',
+#    'django_browserid',   
+#    'context_processors',  # needed for django tests
+#    'debug_toolbar',
+#    'floppyforms',
+#    'registration',  # needed for django tests
 )
 
 JINJA_CONFIG = {
     'extensions': (
+        'jinja2.ext.autoescape', 
         'jinja2.ext.do',
         'jinja2.ext.loopcontrols',
         'jinja2.ext.with_',
@@ -152,6 +154,7 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'django.contrib.auth',
+    'django_browserid',      
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
@@ -161,17 +164,17 @@ INSTALLED_APPS = (
     'cronjobs',
     'bootstrap',
     'floppyforms',
-   'djcelery',
+    'djcelery',
     'scrum',
     'bugmail',
     'bugzilla',
     'south',
     'django_nose',
-    'django_browserid',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.i18n',
     'django.core.context_processors.debug',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
@@ -181,12 +184,15 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'context_processors.context_settings',
     'scrum.context_processors.projects_and_teams',
     'django_browserid.context_processors.browserid_form',
+#    'django_browserid.context_processors.browserid',
 )
 
 AUTHENTICATION_BACKENDS = (
     'django_browserid.auth.BrowserIDBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+BROWSERID_VERIFY_CLASS = 'verify.Verifyclass'
+BROWSERID_AUDIENCES = ['http://wmde.wmflabs.org']
 LOGIN_REDIRECT_URL = LOGIN_REDIRECT_URL_FAILURE = '/'
 LOGIN_URL = LOGOUT_URL = '/'
 
@@ -198,17 +204,19 @@ NOSE_ARGS = [
 # Celery
 CELERY_IMPORTS = ('bugmail')
 #BROKER_URL = "amqp://scrumbugz:scrumbugz@localhost:5672//"
-BROKER_HOST = "127.0.0.1"
+BROKER_HOST = '127.0.0.1'
 BROKER_PORT = 5672   # default RabbitMQ listening port
-BROKER_USER = "scrumbugz"
-BROKER_PASSWORD = "scrumbugz"
-BROKER_VHOST = "scrumbugz"
-CELERY_RESULT_BACKEND = "amqp"
+BROKER_USER = 'scrumbugz'
+BROKER_PASSWORD = 'scrumbugz'
+BROKER_VHOST = 'scrumbugz'
+CELERY_RESULT_BACKEND = 'amqp'
 CELERY_DISABLE_RATE_LIMITS = True
 CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
 CELERY_TASK_RESULT_EXPIRES = 60
 #CELERY_TIMEZONE = 'Europe/Berlin'
 CELERYD_CONCURRENCY = 4
+CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
+CELERYBEAT_SCHEDULE_FILENAME = "/usr/local/django/celery/beat-schedule.db"
 CELERYBEAT_SCHEDULE = {
     'get-bugmails': {
         'task': 'get_bugmails',
@@ -231,6 +239,7 @@ CELERYBEAT_SCHEDULE = {
         'schedule': timedelta(days=5),
     },
 }
+
 
 BUG_OPEN_STATUSES = [
     'UNCONFIRMED',
