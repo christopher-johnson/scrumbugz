@@ -1,1882 +1,738 @@
-2014-01-13 12:54:46,202 [ERROR] django.request: Internal Server Error: /
+2014-01-17 13:16:50,069 [WARNING] django.request: Not Found: /p/WikibaseClient/blocked=17&product=MediaWiki extensions&component=WikidataClient
+2014-01-18 20:53:59,405 [WARNING] django.request: Not Found: /wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/320px-Chhota_imambara_Lucknow.jpg
+2014-01-18 20:54:02,509 [WARNING] django.request: Not Found: /ajax/libs/jquery/1.7.2/jquery.min.js
+2014-01-18 20:54:04,832 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:04,845 [WARNING] django.request: Not Found: /ajax/libs/lodash.js/0.4.2/lodash.min.js
+2014-01-18 20:54:25,443 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:26,433 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:26,493 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:27,352 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:30,577 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:30,636 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:32,572 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 20:54:44,523 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 21:28:35,947 [WARNING] django.request: Not Found: /ajax/libs/jquery/1.7.2/jquery.min.js
+2014-01-18 21:28:36,120 [WARNING] django.request: Not Found: /wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/320px-Chhota_imambara_Lucknow.jpg
+2014-01-18 21:28:36,207 [WARNING] django.request: Not Found: /ajax/libs/lodash.js/0.4.2/lodash.min.js
+2014-01-18 21:28:36,207 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 21:28:56,156 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 21:28:57,195 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 21:29:20,814 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 21:30:13,855 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 21:30:14,955 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 21:30:16,875 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:05,692 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:34,713 [WARNING] django.request: Not Found: /ajax/libs/jquery/1.7.2/jquery.min.js
+2014-01-18 22:12:34,833 [WARNING] django.request: Not Found: /ajax/libs/lodash.js/0.4.2/lodash.min.js
+2014-01-18 22:12:35,193 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:46,346 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:46,348 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:46,346 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:47,361 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:48,163 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:48,628 [WARNING] django.request: Not Found: /wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/320px-Chhota_imambara_Lucknow.jpg
+2014-01-18 22:12:51,215 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-18 22:12:54,123 [WARNING] django.request: Not Found: /ajax/libs/lodash.js/0.4.2/lodash.min.js
+2014-01-18 22:12:54,123 [WARNING] django.request: Not Found: /ajax/libs/jquery/1.7.2/jquery.min.js
+2014-01-18 22:12:54,146 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
+2014-01-26 09:35:57,129 [ERROR] django.request: Internal Server Error: /admin/
 Traceback (most recent call last):
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
-    response = response.render()
+    if hasattr(response, 'render') and callable(response.render):
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
-    self._set_content(self.rendered_content)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
+    if not self._is_rendered:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 79, in rendered_content
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 55, in resolve_template
+    if isinstance(template, (list, tuple)):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 187, in select_template
+    
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 134, in find_template
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 42, in __call__
+    def __call__(self, template_name, template_dirs=None):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 48, in load_template
+    try:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 156, in get_template_from_string
+    the templates in the list. Returns a string.
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 267, in parse
+    # code knows why it terminated
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 214, in do_extends
+    parent_name = parser.compile_filter(bits[1])
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 267, in parse
+    # code knows why it terminated
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/defaulttags.py", line 1045, in load
+    {% load news.photos %}
+TemplateSyntaxError: 'i18n' is not a valid tag library: ImportError raised loading django.templatetags.i18n: cannot import name render_value_in_context
+2014-01-26 09:36:06,736 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 181, in get_response
+    callback, param_dict = resolver.resolve400()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 363, in resolve400
+    return self._resolve_special('400')
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 354, in _resolve_special
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/urls.py", line 6, in <module>
+    admin.autodiscover()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 25, in autodiscover
+    mod = import_module(app)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named browser_id
+2014-01-26 10:21:25,094 [ERROR] django.request: Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
+    if hasattr(response, 'render') and callable(response.render):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
+    if not self._is_rendered:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 79, in rendered_content
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 57, in resolve_template
+    elif isinstance(template, six.string_types):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 134, in find_template
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 42, in __call__
+    def __call__(self, template_name, template_dirs=None):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 48, in load_template
+    try:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 156, in get_template_from_string
+    the templates in the list. Returns a string.
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 267, in parse
+    # code knows why it terminated
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 214, in do_extends
+    parent_name = parser.compile_filter(bits[1])
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 267, in parse
+    # code knows why it terminated
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/defaulttags.py", line 1045, in load
+    {% load news.photos %}
+TemplateSyntaxError: 'i18n' is not a valid tag library: ImportError raised loading django.templatetags.i18n: cannot import name render_value_in_context
+2014-01-26 10:34:57,916 [ERROR] django.request: Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 181, in get_response
+    callback, param_dict = resolver.resolve400()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 363, in resolve400
+    return self._resolve_special('400')
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 354, in _resolve_special
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/urls.py", line 6, in <module>
+    admin.autodiscover()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 25, in autodiscover
+    mod = import_module(app)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+ImportError: No module named browser_id
+2014-01-26 11:30:28,239 [ERROR] django.request: Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 181, in get_response
+    callback, param_dict = resolver.resolve400()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 363, in resolve400
+    return self._resolve_special('400')
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 354, in _resolve_special
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/urls.py", line 12, in <module>
+    url(r'^browserid/', include('django_browserid.urls')),
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/urls.py", line 20, in <module>
+    Verify = import_function_from_setting('BROWSERID_VERIFY_CLASS')
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/util.py", line 43, in import_function_from_setting
+    mod = import_module(module)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/verify.py", line 10
+    
+   ^
+SyntaxError: invalid syntax
+2014-01-26 11:45:07,379 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
     content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 2, in template
+    {% load browserid %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-26 11:56:55,355 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 28, in template
+    {% browserid_css %}
+TemplateSyntaxError: Encountered unknown tag 'browserid_css'.
+2014-01-26 12:55:19,517 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 2, in template
+    {% autoescape true %}
+TemplateSyntaxError: Encountered unknown tag 'autoescape'.
+2014-01-26 13:06:18,629 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 158, in template
+    
+TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endautoescape'. The innermost block that needs to be closed is 'autoescape'.
+2014-01-26 13:07:58,596 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 2, in template
+    {% autoescape true %}
+TemplateSyntaxError: Encountered unknown tag 'autoescape'.
+2014-01-26 13:23:32,183 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 2, in template
+    {% autoescape %}
+TemplateSyntaxError: unexpected 'end of statement block'
+2014-01-26 13:25:46,820 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 2, in template
+    {% autoescape %}
+TemplateSyntaxError: unexpected 'end of statement block'
+2014-01-26 13:28:30,231 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 14, in template
+    {% autoescape %}
+TemplateSyntaxError: unexpected 'end of statement block'
+2014-01-26 13:36:53,614 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 79, in top-level template code
+    {{ browserid_logout(text='Logout') }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 156, in browserid_logout
+    reverse('browserid_logout'))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 85, in browserid_button
+    'attrs': attrs,
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/templates/browserid/button.html", line 1, in top-level template code
+    <a {% for key, value in attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 13:48:36,485 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 81, in top-level template code
+    {{ browserid_login(text='Login', color='dark') }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 131, in browserid_login
+    return browserid_button(text, next, link_class, attrs, fallback_href)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 85, in browserid_button
+    'attrs': attrs,
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/templates/browserid/button.html", line 1, in top-level template code
+    <a {% for key, value in attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 13:48:38,551 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 81, in top-level template code
+    {{ browserid_login(text='Login', color='dark') }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 131, in browserid_login
+    return browserid_button(text, next, link_class, attrs, fallback_href)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 85, in browserid_button
+    'attrs': attrs,
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/templates/browserid/button.html", line 1, in top-level template code
+    <a {% for key, value in attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 14:09:52,563 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 79, in top-level template code
+    {{ browserid_logout(text='Logout') }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 156, in browserid_logout
+    reverse('browserid_logout'))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 85, in browserid_button
+    'attrs': attrs,
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/templates/browserid/button.html", line 1, in top-level template code
+    <a {% for key, value in attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 14:10:34,429 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 79, in top-level template code
+    {{ browserid_logout(text='Logout') }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 156, in browserid_logout
+    reverse('browserid_logout'))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 85, in browserid_button
+    'attrs': attrs,
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/templates/browserid/button.html", line 1, in top-level template code
+    <a {% for key, value in attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 14:39:41,311 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/templates/base.html", line 2, in template
+    {% load browserid %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-26 14:56:27,893 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 79, in top-level template code
+    {{ browserid_logout(text='Logout') }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 156, in browserid_logout
+    reverse('browserid_logout'))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/helpers.py", line 85, in browserid_button
+    'attrs': attrs,
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/templates/browserid/button.html", line 1, in top-level template code
+    <a {% for key, value in attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 15:39:41,747 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
+    if hasattr(response, 'render') and callable(response.render):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
+    if not self._is_rendered:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 79, in rendered_content
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 55, in resolve_template
+    if isinstance(template, (list, tuple)):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 187, in select_template
+    
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 128, in find_template
+    return (source, make_origin(display_name, loader, name, dirs))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 95, in find_template_loader
+    
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    for character in name:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loaders/app_directories.py", line 18, in <module>
+    if six.PY2:
+AttributeError: 'module' object has no attribute 'PY2'
+2014-01-26 15:39:54,708 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
+    if hasattr(response, 'render') and callable(response.render):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
+    if not self._is_rendered:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
     return super(Template, self).render(context_dict)
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
     return self.environment.handle_exception(exc_info, True)
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/home.html", line 1, in top-level template code
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project.html", line 2, in top-level template code
+    {% from "scrum/includes/macros.html" import bug_table with context %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
+    {% from "scrum/includes/macros.html" import left_nav %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "/usr/local/django/scrumbugz/templates/base.html", line 48, in top-level template code
     {% if perms.scrum.add_team %}
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 376, in getattr
     return obj[attribute]
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/context_processors.py", line 12, in __getitem__
-    return self.user.has_perm("%s.%s" % (self.module_name, perm_name))
+    return self.user.has_perm("%s.%s" % (self.app_label, perm_name))
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/functional.py", line 184, in inner
-    self._setup()
+    
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/functional.py", line 248, in _setup
-    self._wrapped = self._setupfunc()
+    self._setup()
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 16, in <lambda>
-    request.user = SimpleLazyObject(lambda: get_user(request))
+    assert hasattr(request, 'session'), "The Django authentication middleware requires session middleware to be installed. Edit your MIDDLEWARE_CLASSES setting to insert 'django.contrib.sessions.middleware.SessionMiddleware'."
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 8, in get_user
-    request._cached_user = auth.get_user(request)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 98, in get_user
-    user_id = request.session[SESSION_KEY]
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 39, in __getitem__
-    return self._session[key]
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 165, in _get_session
-    self._session_cache = self.load()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/cached_db.py", line 32, in load
-    data = super(SessionStore, self).load()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 19, in load
-    expire_date__gt=timezone.now()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/manager.py", line 131, in get
-    return self.get_query_set().get(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/query.py", line 361, in get
-    num = len(clone)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/query.py", line 85, in __len__
-    self._result_cache = list(self.iterator())
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/query.py", line 291, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 763, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 817, in execute_sql
-    cursor = self.connection.cursor()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/backends/__init__.py", line 319, in cursor
-    cursor = util.CursorWrapper(self._cursor(), self)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 288, in _cursor
-    self._sqlite_create_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 278, in _sqlite_create_connection
-    self.connection = Database.connect(**kwargs)
-OperationalError: unable to open database file
-2014-01-13 13:53:07,550 [ERROR] django.request: Internal Server Error: /p/111111/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 13:57:03,747 [ERROR] django.request: Internal Server Error: /p/111111/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 13:57:25,752 [ERROR] django.request: Internal Server Error: /p/new/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 168, in get
-    return super(BaseCreateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:07:01,601 [ERROR] django.request: Internal Server Error: /p/new/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 168, in get
-    return super(BaseCreateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:08:20,034 [ERROR] django.request: Internal Server Error: /p/Wikibase/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:27:57,730 [ERROR] django.request: Internal Server Error: /p/Wikibase/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:31:09,923 [WARNING] django.request: Not Found: /p/Wikibase/
-2014-01-13 14:31:16,626 [ERROR] django.request: Internal Server Error: /p/new/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 168, in get
-    return super(BaseCreateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:33:13,460 [ERROR] django.request: Internal Server Error: /p/new/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 168, in get
-    return super(BaseCreateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:33:44,562 [ERROR] django.request: Internal Server Error: /p/new/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 168, in get
-    return super(BaseCreateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:35:56,271 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:38:45,852 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:39:41,723 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:50:35,146 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:50:57,398 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 14:51:05,567 [ERROR] django.request: Internal Server Error: /p/new/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 168, in get
-    return super(BaseCreateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 15:18:40,137 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 15:19:04,650 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 15:28:18,312 [WARNING] django.request: Forbidden (CSRF cookie not set.): /
-2014-01-13 22:03:11,295 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 22:03:16,157 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 22:19:28,352 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 22:19:33,852 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/edit/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 51, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 50, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 191, in get
-    return super(BaseUpdateView, self).get(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 132, in get
-    return self.render_to_response(self.get_context_data(form=form))
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 158, in get_context_data
-    for prod, comps in bugzilla.get_products_simplified().items():
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 159, in get_products_simplified
-    products = self.get_products()
-  File "/usr/local/django/scrumbugz/bugzilla/api.py", line 153, in get_products
-    products = self.Product.get(prod_query)['products']
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
-    return self.__send(self.__name, args)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
-    verbose=self.__verbose
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
-    return self.single_request(host, handler, request_body, verbose)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
-    self.send_content(h, request_body)
-  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
-    connection.endheaders(request_body)
-  File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
-    self._send_output(message_body)
-  File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
-    self.send(msg)
-  File "/usr/lib/python2.7/httplib.py", line 776, in send
-    self.connect()
-  File "/usr/lib/python2.7/httplib.py", line 1157, in connect
-    self.timeout, self.source_address)
-  File "/usr/lib/python2.7/socket.py", line 571, in create_connection
-    raise err
-error: [Errno 111] Connection refused
-2014-01-13 22:44:10,406 [WARNING] django.request: Not Found: /xmlrpc.cgi
-2014-01-13 22:44:10,407 [WARNING] django.request: Forbidden (CSRF cookie not set.): /xmlrpc.cgi
-2014-01-13 22:49:35,895 [WARNING] django.request: Not Found: /xmlrpc.cgi
-2014-01-13 22:49:35,896 [WARNING] django.request: Forbidden (CSRF token missing or incorrect.): /xmlrpc.cgi
-2014-01-13 22:52:51,290 [WARNING] django.request: Not Found: /xmlrpc.cgi
-2014-01-13 22:52:51,291 [WARNING] django.request: Forbidden (CSRF cookie not set.): /xmlrpc.cgi
-2014-01-13 23:13:50,568 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 00:23:44,940 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 00:26:15,716 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 01:11:41,661 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 10:14:24,005 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 10:42:23,333 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 10:45:52,315 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 10:56:01,577 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 11:09:31,651 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 11:37:12,252 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 11:42:27,363 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 11:51:13,084 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/products/
-Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
-    response = callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 48, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 298, in dispatch
-    **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 41, in dispatch
-    return wrap(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 40, in wrap
-    *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 172, in post
-    return super(BaseCreateView, self).post(request, *args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/views/generic/edit.py", line 138, in post
-    return self.form_valid(form)
-  File "/usr/local/django/scrumbugz/scrum/views.py", line 314, in form_valid
-    self.object = form.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 364, in save
-    fail_message, commit, construct=False)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/models.py", line 86, in save_instance
-    instance.save()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 463, in save
-    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 565, in save_base
-    created=(not record_exists), raw=raw, using=using)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/dispatch/dispatcher.py", line 172, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 1007, in fetch_product_bugs
-    update_product.delay(*args)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 343, in delay
-    return self.apply_async(args, kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/task.py", line 469, in apply_async
-    **options)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/celery/app/amqp.py", line 214, in publish_task
-    **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/messaging.py", line 164, in publish
-    routing_key, mandatory, immediate, exchange, declare)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 470, in _ensured
-    interval_max)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 396, in ensure_connection
-    interval_start, interval_step, interval_max, callback)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/utils/__init__.py", line 217, in retry_over_time
-    return fun(*args, **kwargs)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 246, in connect
-    return self.connection
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 761, in connection
-    self._connection = self._establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/connection.py", line 720, in _establish_connection
-    conn = self.transport.establish_connection()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 115, in establish_connection
-    conn = self.Connection(**opts)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/connection.py", line 136, in __init__
-    self.transport = create_transport(host, connect_timeout, ssl)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 264, in create_transport
-    return TCPTransport(host, connect_timeout)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/amqp/transport.py", line 99, in __init__
-    raise socket.error(last_err)
-error: [Errno 111] Connection refused
-2014-01-14 12:17:20,495 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/backlog/
+    def get_user(request):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 100, in get_user
+    if hasattr(user, 'is_authenticated') and not user.is_authenticated():
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 16, in load_backend
+    return import_by_path(path)()
+ImproperlyConfigured: Error importing authentication backend django.contrib.auth.backends.ModelBackend: "cannot import name get_user_model"
+2014-01-26 15:39:58,037 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/
 Traceback (most recent call last):
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
-    response = response.render()
+    if hasattr(response, 'render') and callable(response.render):
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
-    self._set_content(self.rendered_content)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
-    content = template.render(context)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
-    return super(Template, self).render(context_dict)
-  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 894, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import toggle_stats_button, bug_table with context %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import left_nav %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/usr/local/django/scrumbugz/templates/base.html", line 102, in top-level template code
-    {% block content %}{% endblock %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 58, in block "content"
-    {{ bug_table(bugs, 'backlog_table', blocked_bugs=blocked_bugs, flagged_bugs=flagged_bugs, show_project=False) }}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/includes/macros.html", line 60, in template
-    <a href="{{ bug.get_bugzilla_url() }}" title="Open in Bugzilla"><img src="{{ STATIC_URL }}img/bugzilla.png" alt="Open in Bugzilla"> {{ bug.id }}</a>
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 668, in get_bugzilla_url
-    return '%sid=%s' % (settings.BUGZILLA_SHOW_URL, self.id)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/functional.py", line 185, in inner
-    return func(self._wrapped, *args)
-AttributeError: 'Settings' object has no attribute 'BUGZILLA_SHOW_URL'
-2014-01-14 12:17:32,205 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/backlog/
+    if not self._is_rendered:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 79, in rendered_content
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 55, in resolve_template
+    if isinstance(template, (list, tuple)):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 187, in select_template
+    
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 128, in find_template
+    return (source, make_origin(display_name, loader, name, dirs))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 95, in find_template_loader
+    
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    for character in name:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loaders/app_directories.py", line 18, in <module>
+    if six.PY2:
+AttributeError: 'module' object has no attribute 'PY2'
+2014-01-26 15:42:27,320 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/
 Traceback (most recent call last):
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
-    response = response.render()
+    if hasattr(response, 'render') and callable(response.render):
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
-    self._set_content(self.rendered_content)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
-    content = template.render(context)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
-    return super(Template, self).render(context_dict)
-  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 894, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import toggle_stats_button, bug_table with context %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import left_nav %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/usr/local/django/scrumbugz/templates/base.html", line 102, in top-level template code
-    {% block content %}{% endblock %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 58, in block "content"
-    {{ bug_table(bugs, 'backlog_table', blocked_bugs=blocked_bugs, flagged_bugs=flagged_bugs, show_project=False) }}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/includes/macros.html", line 60, in template
-    <a href="{{ bug.get_bugzilla_url() }}" title="Open in Bugzilla"><img src="{{ STATIC_URL }}img/bugzilla.png" alt="Open in Bugzilla"> {{ bug.id }}</a>
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 668, in get_bugzilla_url
-    return '%sid=%s' % (settings.BUGZILLA_SHOW_URL, self.id)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/functional.py", line 185, in inner
-    return func(self._wrapped, *args)
-AttributeError: 'Settings' object has no attribute 'BUGZILLA_SHOW_URL'
-2014-01-14 12:21:29,317 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/backlog/
+    if not self._is_rendered:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 79, in rendered_content
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 55, in resolve_template
+    if isinstance(template, (list, tuple)):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 187, in select_template
+    
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 145, in get_template
+    """
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 128, in find_template
+    return (source, make_origin(display_name, loader, name, dirs))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 95, in find_template_loader
+    
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    for character in name:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loaders/app_directories.py", line 18, in <module>
+    if six.PY2:
+AttributeError: 'module' object has no attribute 'PY2'
+2014-01-26 15:46:25,369 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/
 Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
-    response = response.render()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
-    self._set_content(self.rendered_content)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
-    content = template.render(context)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
-    return super(Template, self).render(context_dict)
-  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 894, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import toggle_stats_button, bug_table with context %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import left_nav %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/usr/local/django/scrumbugz/templates/base.html", line 102, in top-level template code
-    {% block content %}{% endblock %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 58, in block "content"
-    {{ bug_table(bugs, 'backlog_table', blocked_bugs=blocked_bugs, flagged_bugs=flagged_bugs, show_project=False) }}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/includes/macros.html", line 60, in template
-    <a href="{{ bug.get_bugzilla_url() }}" title="Open in Bugzilla"><img src="{{ STATIC_URL }}img/bugzilla.png" alt="Open in Bugzilla"> {{ bug.id }}</a>
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 668, in get_bugzilla_url
-    return '%sid=%s' % (settings.BUGZILLA_SHOW_URL, self.id)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/functional.py", line 185, in inner
-    return func(self._wrapped, *args)
-AttributeError: 'Settings' object has no attribute 'BUGZILLA_SHOW_URL'
-2014-01-14 12:21:33,883 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/backlog/
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 181, in get_response
+    callback, param_dict = resolver.resolve400()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 363, in resolve400
+    return self._resolve_special('400')
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 354, in _resolve_special
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/urls.py", line 12, in <module>
+    url(r'^browserid/', include('django_browserid.urls')),
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/urls.py", line 6, in <module>
+    from django.conf.urls.defaults import patterns, url
+ImportError: No module named defaults
+2014-01-26 15:49:23,470 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/
 Traceback (most recent call last):
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 136, in get_response
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 181, in get_response
+    callback, param_dict = resolver.resolve400()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 363, in resolve400
+    return self._resolve_special('400')
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 354, in _resolve_special
+    callback = getattr(self.urlconf_module, 'handler%s' % view_type, None)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/urls.py", line 12, in <module>
+    url(r'^browserid/', include('django_browserid.urls')),
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 26, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/importlib.py", line 40, in import_module
+    __import__(name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django_browserid/urls.py", line 6, in <module>
+    from django.conf.urls.defaults import patterns, url
+ImportError: No module named defaults
+2014-01-26 15:55:20,581 [ERROR] django.request: Internal Server Error: /p/WikibaseClient/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
     response = response.render()
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 104, in render
-    self._set_content(self.rendered_content)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
-    content = template.render(context)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
-    return super(Template, self).render(context_dict)
-  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 894, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import toggle_stats_button, bug_table with context %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
-    {% from "scrum/includes/macros.html" import left_nav %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/usr/local/django/scrumbugz/templates/base.html", line 102, in top-level template code
-    {% block content %}{% endblock %}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_backlog.html", line 58, in block "content"
-    {{ bug_table(bugs, 'backlog_table', blocked_bugs=blocked_bugs, flagged_bugs=flagged_bugs, show_project=False) }}
-  File "/usr/local/django/scrumbugz/scrum/templates/scrum/includes/macros.html", line 60, in template
-    <a href="{{ bug.get_bugzilla_url() }}" title="Open in Bugzilla"><img src="{{ STATIC_URL }}img/bugzilla.png" alt="Open in Bugzilla"> {{ bug.id }}</a>
-  File "/usr/local/django/scrumbugz/scrum/models.py", line 668, in get_bugzilla_url
-    return '%sid=%s' % (settings.BUGZILLA_SHOW_URL, self.id)
-  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/functional.py", line 185, in inner
-    return func(self._wrapped, *args)
-AttributeError: 'Settings' object has no attribute 'BUGZILLA_SHOW_URL'
+    context = self.resolve_context(self.context_data)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 168, in __init__
+    for processor in get_standard_processors() + processors:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 148, in get_standard_processors
+    func = import_by_path(path)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django_browserid.context_processors" does not define a "browserid" attribute/class
+2014-01-26 15:55:36,458 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 168, in __init__
+    for processor in get_standard_processors() + processors:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 148, in get_standard_processors
+    func = import_by_path(path)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django_browserid.context_processors" does not define a "browserid" attribute/class
+2014-01-26 15:59:25,224 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 168, in __init__
+    for processor in get_standard_processors() + processors:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 148, in get_standard_processors
+    func = import_by_path(path)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django_browserid.context_processors" does not define a "browserid" attribute/class
+2014-01-26 15:59:28,889 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 81, in rendered_content
+    context = self.resolve_context(self.context_data)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 159, in resolve_context
+    return RequestContext(self._request, context, current_app=self._current_app)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 168, in __init__
+    for processor in get_standard_processors() + processors:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/context.py", line 148, in get_standard_processors
+    func = import_by_path(path)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django_browserid.context_processors" does not define a "browserid" attribute/class

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="span3">
+      <div class="well sidebar-nav">
+        {% block left_nav_list %}{% endblock %}
+      </div><!--/well-->
+    </div><!--/span3-->
+    <div class="span9">
+      {% block main_content %}{% endblock %}
+    </div>
+  </div>
+{% endblock %}

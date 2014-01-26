@@ -1,0 +1,63 @@
+{% extends "scrum/base_team.html" %}
+
+{% block content %}
+  {% if perms.scrum.add_sprint %}
+    <a class="btn btn-primary pull-right"
+       href="{{ url('scrum_sprint_new', team.slug) }}">
+      <i class="icon-plus icon-white"></i> New Sprint
+    </a>
+  {% endif %}
+  {% if perms.scrum.change_team %}
+    <a class="btn btn-primary pull-right"
+       href="{{ team.get_edit_url() }}">
+      <i class="icon-edit icon-white"></i> Edit
+    </a>
+  {% endif %}
+  <div class="page-header">
+    <h1>{{ team.name }} Team</h1>
+  </div>
+  <h2>Projects</h2>
+  <ul>
+    {% for p in team.projects.all() %}
+      <li><a href="{{ p.get_absolute_url() }}">{{ p.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <h2>Sprints</h2>
+
+  <table class="table table-condensed table-bordered table-hover" id="bugs_table">
+    <thead>
+    <tr>
+      <th class="type-string">Name</th>
+      <th class="type-string">Start</th>
+      <th class="type-string">End</th>
+      <th class="type-int">Points</th>
+      <th class="type-int">Remaining</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for sprint in team.sprints.all() %}
+      {% set bugs_data=sprint.get_cached_bugs_data() %}
+      <tr{% if sprint.is_active() %} class="success"{% endif %}>
+        <td data-order-by="{{ sprint.name }}">
+          <a href="{{ sprint.get_absolute_url() }}">
+            {{ sprint.name }}
+          </a>
+        </td>
+        <td>{{ sprint.start_date }}</td>
+        <td>{{ sprint.end_date }}</td>
+        <td>{{ bugs_data.total_points }}</td>
+        <td>
+          <span class="badge badge-{{ 'important' if bugs_data.points_remaining else 'success' }}">
+            {{ bugs_data.points_remaining }}
+          </span>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.stupidtable.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/project.js"></script>
+{% endblock %}

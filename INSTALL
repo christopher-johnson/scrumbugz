@@ -68,7 +68,11 @@ Populate Database and Initiate settings.py
  sudo apt-get install libapache2-mod-wsgi
  
  Install Rabbit MQ
- sudo apt-get install rabbitmq-server
+sudo apt-get install rabbitmq-server
+sudo rabbitmqctl add_user scrumbugz password
+sudo rabbitmqctl add_vhost scrumbugz
+sudo rabbitmqctl set_permissions -p scrumbugz scrumbugz ".*" ".*" ".*"
+https://www.rabbitmq.com/man/rabbitmqctl.1.man.html
 
  Setup Apache
  cd /var/www
@@ -182,10 +186,5 @@ cp supervisord.conf /etc/supervisord
 sudo mkdir /etc/supervisord/conf.d
 sudo cp scrumbugz-celery.conf /etc/supervisord/conf.d
 create  /var/log/supervisord and /var/log/celery
-sudo chown chjohnson supervisord
 
-#start supervisord
-supervisord -c /etc/supervisord/supervisord.conf
-#stop supervisord
-sudo supervisorctl -c /etc/supervisord/supervisord.conf shutdown
 

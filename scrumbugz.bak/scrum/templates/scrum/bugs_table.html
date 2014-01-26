@@ -1,0 +1,50 @@
+{% from "scrum/includes/macros.html" import bug_table with context %}
+
+<div class="row">
+  <div class="span12">
+    {% if not scrum_only %}
+      <a href="{{ request.path }}" class="btn pull-right">Hide dataless bugs</a>
+    {% endif %}
+    <h2>Stories</h2>
+    {% if scrum_only and object.num_no_data_bugs %}
+      <div class="alert">
+        <button class="close" data-dismiss="alert">&times;</button>
+        <strong>Warning!</strong> There are {{ object.num_no_data_bugs }} bug{{ object.num_no_data_bugs|pluralize }} with no scrum data.
+        <a href="?all=1">Show them</a>?
+      </div>
+    {% endif %}
+    {{ bug_table(bugs, blocked_bugs=blocked_bugs, flagged_bugs=flagged_bugs) }}
+  </div>
+</div>
+
+<div class="row">
+    <div class="span12">
+        {% if bz_search_url %}
+            <a href="{{ bz_search_url }}" target="_blank" class="btn pull-right">See in Bugzilla</a>
+        {% endif %}
+        {% for product in object.get_products() %}
+            <a class="btn" target="_blank" href="{{ BUGZILLA_FILE_URL }}product={{ product }}"><i class="icon-plus-sign"></i> {{ product }} bug</a>
+        {% endfor %}
+    </div>
+</div>
+<div class="row">
+  <div class="span12">
+    <h4>Legend</h4>
+    <table class="table table-hover">
+      <tbody>
+      <tr class="success pull-left">
+        <td>Closed</td>
+      </tr>
+      <tr class="warning pull-left">
+        <td>Unassigned</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <p><strong>NOTE:</strong> Hard (shift) refresh your browser to get new data from Bugzilla.</p>
+  </div>
+</div>

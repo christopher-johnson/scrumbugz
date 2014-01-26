@@ -611,7 +611,7 @@ class Bug(models.Model):
     status = models.CharField(max_length=20)
     resolution = models.CharField(max_length=20, blank=True)
     summary = models.CharField(max_length=500)
-    priority = models.CharField(max_length=2, blank=True)
+    priority = models.CharField(max_length=20, blank=True)
     whiteboard = models.CharField(max_length=2048, blank=True)
     blocks = JSONField(blank=True)
     depends_on = JSONField(blank=True)
