@@ -27,7 +27,7 @@ BUGZILLA_PASS = '*****'
 SITE_URL = 'http://scrum.pmtpa.wmflabs'
 
 
-SECRET_KEY = "shhhhhh"
+SECRET_KEY = "*****"
 INTERNAL_IPS = (
     '127.0.0.1',
 )
@@ -107,7 +107,7 @@ JINGO_EXCLUDE_APPS = (
 #    'django_browserid',   
 #    'context_processors',  # needed for django tests
 #    'debug_toolbar',
-#    'floppyforms',
+    'floppyforms',
 #    'registration',  # needed for django tests
 )
 
@@ -207,7 +207,7 @@ CELERY_IMPORTS = ('bugmail')
 BROKER_HOST = '127.0.0.1'
 BROKER_PORT = 5672   # default RabbitMQ listening port
 BROKER_USER = 'scrumbugz'
-BROKER_PASSWORD = 'scrumbugz'
+BROKER_PASSWORD = '*****'
 BROKER_VHOST = 'scrumbugz'
 CELERY_RESULT_BACKEND = 'amqp'
 CELERY_DISABLE_RATE_LIMITS = True
