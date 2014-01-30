@@ -736,3 +736,369 @@ Traceback (most recent call last):
   File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/utils/module_loading.py", line 31, in import_by_path
     error_prefix, module_path, class_name))
 ImproperlyConfigured: Module "django_browserid.context_processors" does not define a "browserid" attribute/class
+2014-01-26 17:41:46,673 [WARNING] django.request: Not Found: /tasks
+2014-01-26 17:42:17,009 [WARNING] django.request: Not Found: /ae/
+2014-01-26 17:48:49,966 [ERROR] django.request: Internal Server Error: /p/new/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_form.html", line 2, in top-level template code
+    {% from "bootstrap/forms/macros.html" import field %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
+    {% from "scrum/includes/macros.html" import left_nav %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 102, in top-level template code
+    {% block content %}{% endblock %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 11, in block "content"
+    {% block main_content %}{% endblock %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_form.html", line 17, in block "main_content"
+    {{ field(f) }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/bootstrap/templates/bootstrap/forms/macros.html", line 55, in template
+    {{ input(field, prepend_content, append_content) }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/bootstrap/templates/bootstrap/forms/macros.html", line 30, in template
+    {{ field|safe }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/filters.py", line 705, in do_mark_safe
+    return Markup(value)
+  File "/usr/lib/python2.7/dist-packages/markupsafe/__init__.py", line 71, in __new__
+    return unicode.__new__(cls, base)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/widgets.py", line 98, in render
+    context_instance=self.context_instance)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/input.html", line 1, in top-level template code
+    <input type="{{ type }}" name="{{ name }}"{% if value %} value="{{ value }}"{% endif %}{% if required %} required{% endif %}{% include "floppyforms/attrs.html" %}{% if datalist %} list="{{ attrs.id }}_list"{% endif %}>{% if datalist %}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/attrs.html", line 1, in top-level template code
+    {% for name, value in attrs.items %} {{ name }}{% if value != True %}="{{ value }}"{% endif %}{% endfor %}
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 17:48:58,517 [ERROR] django.request: Internal Server Error: /p/new/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_form.html", line 2, in top-level template code
+    {% from "bootstrap/forms/macros.html" import field %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
+    {% from "scrum/includes/macros.html" import left_nav %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 102, in top-level template code
+    {% block content %}{% endblock %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 11, in block "content"
+    {% block main_content %}{% endblock %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_form.html", line 17, in block "main_content"
+    {{ field(f) }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/bootstrap/templates/bootstrap/forms/macros.html", line 55, in template
+    {{ input(field, prepend_content, append_content) }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/bootstrap/templates/bootstrap/forms/macros.html", line 30, in template
+    {{ field|safe }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/filters.py", line 705, in do_mark_safe
+    return Markup(value)
+  File "/usr/lib/python2.7/dist-packages/markupsafe/__init__.py", line 71, in __new__
+    return unicode.__new__(cls, base)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/forms.py", line 425, in __str__
+    return self.as_widget()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/widgets.py", line 98, in render
+    context_instance=self.context_instance)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/input.html", line 1, in top-level template code
+    <input type="{{ type }}" name="{{ name }}"{% if value %} value="{{ value }}"{% endif %}{% if required %} required{% endif %}{% include "floppyforms/attrs.html" %}{% if datalist %} list="{{ attrs.id }}_list"{% endif %}>{% if datalist %}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/attrs.html", line 1, in top-level template code
+    {% for name, value in attrs.items %} {{ name }}{% if value != True %}="{{ value }}"{% endif %}{% endfor %}
+TypeError: 'builtin_function_or_method' object is not iterable
+2014-01-26 17:59:40,137 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/layouts/table.html", line 1, in template
+    {% load floppyforms %}{% block formconfig %}{% formconfig row using "floppyforms/rows/tr.html" %}{% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-26 18:11:25,722 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/layouts/table.html", line 1, in template
+    {% block formconfig %}{% formconfig row using "floppyforms/rows/tr.html" %}{% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'formconfig'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2014-01-26 18:22:31,405 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/layouts/table.html", line 1, in template
+    {% include form.html %}{% block formconfig %}{% formconfig row using "floppyforms/rows/tr.html" %}{% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'formconfig'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2014-01-26 18:23:28,185 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/layouts/table.html", line 1, in template
+    {% load floppyforms %}{% block formconfig %}{% formconfig row using "floppyforms/rows/tr.html" %}{% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-26 18:25:17,796 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/layouts/table.html", line 1, in template
+    {% load floppyforms %}{% block formconfig %}{% formconfig row using "floppyforms/rows/tr.html" %}{% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-26 18:32:26,831 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    if settings.TEMPLATE_DEBUG:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    extensions=(),
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/layouts/table.html", line 1, in template
+    {% load floppyforms %}{% block formconfig %}{% formconfig row using "floppyforms/rows/tr.html" %}{% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-26 18:32:45,633 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 189, in render
+    if settings.TEMPLATE_DEBUG:
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 894, in render
+    extensions=(),
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templates/floppyforms/layouts/table.html", line 1, in template
+    {% load floppyforms %}{% block formconfig %}{% formconfig row using "floppyforms/rows/tr.html" %}{% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-26 18:42:58,748 [ERROR] django.request: Internal Server Error: /p/test/bugs/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 195, in render
+    return super(Template, self).render(context_dict)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_bugs.html", line 2, in top-level template code
+    {% from "scrum/includes/macros.html" import toggle_stats_button, bug_table with context %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base_project.html", line 2, in top-level template code
+    {% from "scrum/includes/macros.html" import left_nav %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/base.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/django/scrumbugz/templates/base.html", line 102, in top-level template code
+    {% block content %}{% endblock %}
+  File "/usr/local/django/scrumbugz/scrum/templates/scrum/project_bugs.html", line 67, in block "content"
+    {{ form|safe }}
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/filters.py", line 747, in do_mark_safe
+    return Markup(value)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/markupsafe/__init__.py", line 72, in __new__
+    return text_type.__new__(cls, base)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/forms.py", line 29, in __str__
+    return self._render_as('floppyforms/layouts/default.html')
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/forms.py", line 26, in _render_as
+    return self._template_node.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templatetags/floppyforms.py", line 512, in render
+    return super(FormNode, self).render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templatetags/floppyforms.py", line 476, in render
+    output = nodelist.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/defaulttags.py", line 196, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/templatetags/floppyforms.py", line 636, in render
+    output = bound_field.as_widget(widget=widget)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/forms/forms.py", line 475, in as_widget
+    return widget.render(name, self.value(), attrs=attrs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/floppyforms/widgets.py", line 98, in render
+    context_instance=self.context_instance)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/defaulttags.py", line 805, in do_for
+    sequence = parser.compile_filter(bits[in_index+1])
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '()' from 'attrs.items()'
+2014-01-26 19:05:35,259 [ERROR] django.request: Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 139, in get_response
+    response = response.render()
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 80, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/response.py", line 58, in resolve_template
+    return loader.get_template(template)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 227, in load_template
+    template = env.get_template(template_name)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jingo/__init__.py", line 38, in get_template
+    return super(Environment, self).get_template(name, parent, globals)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/loaders.py", line 395, in load
+    return loader.load(environment, name, globals)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 554, in compile
+    self.handle_exception(exc_info, source_hint=source)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/jinja2/environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/django/scrumbugz/venv/lib/python2.7/site-packages/django/contrib/admin/templates/registration/logged_out.html", line 2, in template
+    {% load i18n %}
+TemplateSyntaxError: Encountered unknown tag 'load'.
+2014-01-27 10:58:46,012 [WARNING] django.request: Not Found: /tasks

@@ -172,7 +172,7 @@ def get_bug_id(msg):
     return None
 
 
-def get_bugmails(delete=True):
+def get_bugmails(delete=False):
     """
     Return a dict of parsed email messages keyed on bug id.
     :param delete: delete the email after fetching
