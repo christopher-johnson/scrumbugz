@@ -4,22 +4,49 @@
 <body>
   <div>
 
-    <h1>Scrumify your Bugzilla</h1>
+     <h3>Scrumbugs: Agile Project Management with Bugzilla</h3>
+    <ul><li>This site allows the visualization of the details of the projects
+    managed in Bugzilla.</li>
+<a title="By JJ Harrison (jjharrison89@facebook.com) (Own work) [GFDL 1.2 (http://www.gnu.org/licenses/old-licenses/fdl-1.2.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AGaura_lindheimeri_Whirling_Butterflies.jpg"><img width="160" alt="Gaura lindheimeri Whirling Butterflies" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Gaura_lindheimeri_Whirling_Butterflies.jpg/160px-Gaura_lindheimeri_Whirling_Butterflies.jpg"/></a>
+<hr>
+<h4>Immediate Goals Of Scrumbugs</h4>
+<ul><li>Reduce Work In Progress</li>
+<li>Balance Demand Against Throughput</li>
+<li>Prioritize</li></ul>
+<hr>
+<h4>Definitions</h4>
+<ul><li>Backlog:                     A curated list of bugs from bugzilla, things we should do</li>
+<li>Ready List                 A curated list of bugs in scrumbugs, things we can do</li>
+<li>Sprint                        A specific timeframe to complete tasks, for us 2 weeks to start</li></ul>
+<hr>
+<h4>How Scrumbugs Works : Generally</h4>
+<ul><li>PMs & Devs maintain a backlog and a list of ready tasks that can be worked on. Collectively, in an iteration meeting, teams review the ready tasks across projects and assign work.</li></ul>
 
-    <ul><li>This site allows you to see all of the details of the projects
-    you're managing in Bugzilla.</li><li> Just enter the Product and optionally Component
-    into the "New Project" form. Any open bugs with scrum data (u, c, or p tag
-    in the whiteboard field) will then appear in your backlog.</li><li> Move them into
-    a sprint and reap the glory as your burndown chart slopes to victory.</li></ul>
+<h4>How Scrumbugs Works : The Code</h4>
+<ul><li>
+ <a rel="nofollow" href="https://wikitech.wikimedia.org/wiki/Nova_Resource:Scrumbugz">Documentation</a>
+</li></ul>
 
-<img alt="Chota Imambara" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/320px-Chhota_imambara_Lucknow.jpg" width="320" height="210" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/480px-Chhota_imambara_Lucknow.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/640px-Chhota_imambara_Lucknow.jpg 2x">
+<h4>How Scrumbugs Works : The Rules</h4>
+<ul><li>Project  Managers (PMs) & Developers (DV) may add a story to the backlog for  a project and promote it to the ready list at any time</li>
+<li>PMs should only move a story to the current sprint during an iteration meeting</li>
+<li>DVs can move stories from the ready list to the current sprint at any time</li></ul>
 
+<hr>
+<h4>Working With Scrumbugs : Walkthrough</h4>
+<ul><li>Project Management</li>
+<ul><li>Create new project with backlog</li>
+<li>Info required for bugs... u,c,p tags explained</li>
+<li>Managing the ready list</li></ul>
+
+<li>Team Management</li>
+<ul><li>Assigning work for the team</li>
+<li>Seeing what's being worked, what should I work on next!</li></ul>
+
+<li>Burndown Charts</li></ul>
+
+<hr>
  <ul><li>If you would like a sign in to the system, please contact <a rel="nofollow" href="mailto:christopher.johnson@wikimedia.de">&lt;christopher.johnson@wikimedia.de&gt;</li></a>
 <li>The next step is to use live Bugzilla data from a replication to the test instance for a usability experiment.</li></ul>
-
-    <p>
-      <a class="btn btn-primary btn-large"
-         href="{{ url('scrum_teams_list') }}">Go To Teams &raquo;</a>
-    </p>
   </div>
 {% endblock %}
