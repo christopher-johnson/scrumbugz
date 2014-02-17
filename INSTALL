@@ -29,7 +29,7 @@ Initialize Django Project (appends [PROJECT_DIR] to $sys.path
 cd ..
 django-admin.py startproject scrumbugz .
 
-sudo mv settings-dist.py settings.py
+mv settings-dist.py settings.py
 EDIT settings.py
 
 DATABASES = {
@@ -97,9 +97,9 @@ CELERY CONF
 Install Supervisor
 sudo easy_install supervisor
 sudo mkdir /etc/supervisord
-cp /usr/local/django/config/supervisor/supervisord.conf /etc/supervisord
+cp /usr/local/django/config/supervisord/supervisord.conf /etc/supervisord
 sudo mkdir /etc/supervisord/conf.d
-sudo cp /usr/local/django/config/supervisor/scrumbugz-celery.conf /etc/supervisord/conf.d
+sudo cp /usr/local/django/config/supervisord/scrumbugz-celery.conf /etc/supervisord/conf.d
 create  /var/log/supervisord and /var/log/celery
 
 START
